@@ -27,14 +27,14 @@ async function publishPost(id: number): Promise<void> {
   await fetch(`https://nextjs-prisma-oa-uth-blog.vercel.app/api/publish/${id}`, {
     method: 'PUT',
   });
-  await Router.push('https://nextjs-prisma-oa-uth-blog.vercel.app');
+  await Router.push('/');
 }
 
 async function deletePost(id: number): Promise<void> {
   await fetch(`https://nextjs-prisma-oa-uth-blog.vercel.app/api/post/${id}`, {
     method: 'DELETE',
   });
-  Router.push('/https://nextjs-prisma-oa-uth-blog.vercel.app');
+  Router.push('/');
 }
 
 const Post: React.FC<PostProps> = (props) => {
