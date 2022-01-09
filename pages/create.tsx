@@ -41,7 +41,7 @@ const Draft: React.FC = () => {
             value={content}
           />
           <input disabled={!content || !title} type="submit" value="Create" />
-          <a className="back" href="#" onClick={() => Router.push('/')}>
+          <a className="back" href="#" onClick={() => Router.push('https://nextjs-prisma-oa-uth-blog.vercel.app/')}>
             or Cancel
           </a>
         </form>

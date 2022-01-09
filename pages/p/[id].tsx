@@ -24,17 +24,17 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 };
 
 async function publishPost(id: number): Promise<void> {
-  await fetch(`http://localhost:3000/api/publish/${id}`, {
+  await fetch(`https://nextjs-prisma-oa-uth-blog.vercel.app/api/publish/${id}`, {
     method: 'PUT',
   });
-  await Router.push('/');
+  await Router.push('https://nextjs-prisma-oa-uth-blog.vercel.app');
 }
 
 async function deletePost(id: number): Promise<void> {
-  await fetch(`http://localhost:3000/api/post/${id}`, {
+  await fetch(`https://nextjs-prisma-oa-uth-blog.vercel.app/api/post/${id}`, {
     method: 'DELETE',
   });
-  Router.push('/');
+  Router.push('/https://nextjs-prisma-oa-uth-blog.vercel.app');
 }
 
 const Post: React.FC<PostProps> = (props) => {
